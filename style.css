@@ -4,18 +4,23 @@
 
 body {
     margin: 0px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .toolbar {
     height: 12vh;
-    background-color: #2d3436;
+    background-color: #0D090A;
     display: flex;
     padding-left: 5rem;
     align-items: center;
 
 }
 
-
+.board {
+    height: calc(100 - 12vh);
+    background: #EAF2EF;
+}
 
 
 
@@ -24,8 +29,9 @@ body {
     width: 18rem;
     margin-right: 4rem;
     border-radius: 0.2rem;
-    background-color: #6d7c7e;
+    background-color: #8D80AD;
     display: flex;
+    
 }
 
 
@@ -36,10 +42,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 1px solid;
 }
 
 .active {
-    background-color: brown;
+    background-color: #FF8C42;
 }
 
 .pen {
@@ -63,7 +70,7 @@ body {
     margin-top: 1px;
     margin-left: 7.29rem;
     border-radius: 0.2rem;
-    background: #6d7c7e;
+    background: #8D80AD;
     color: white;
     padding: 16px;
     z-index: 1;
@@ -177,7 +184,7 @@ body {
     width: 14rem;
     margin-right: 4rem;
     border-radius: 0.2rem;
-    background-color: #6d7c7e;
+    background-color: #8D80AD;
     display: flex;
     justify-content: space-around;
 }
@@ -189,6 +196,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 1px solid;
 }
 
 
@@ -197,18 +205,21 @@ body {
 .fa-file-upload,
 .fa-file-download,
 .fa-sun,
+.fa-moon,
 .fa-sticky-note {
     font-size: 25px;
 }
 
 .theme_container {
     height: 60%;
-    width: 5rem;
-    /* background-color: #6d7c7e; */
+    width: 3rem;
+    background-color: #8D80AD;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
+    margin-right: 10px;
+    border-radius: 0.2rem;
 }
 
 
@@ -223,39 +234,17 @@ body {
 
 
 
-#pensize{
+#pensize {
     -webkit-appearance: none;
     width: 100%;
     height: 1px;
     background: black;
     outline: none;
 }
-#ersize{
+
+#ersize {
     -webkit-appearance: none;
     height: 1px;
     background: black;
     outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
