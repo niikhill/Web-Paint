@@ -109,15 +109,10 @@ for (let i = 0; i < colorElem.length; i++) {
         pen_color = e.target.classList[1]
     })
 }
-
-
-
-
-
 pen_tool_icon.addEventListener("click", (e) => {
     let is_Active = pen_tool_btn.classList.contains("active");
-
     if (is_Active == false) {
+        document.body.style.cursor = "url(http://www.rw-designer.com/cursor-extern.php?id=138774),auto"
         is_penToolSelected = true;
         is_eraseToolSelected = false;
         pen_tool_btn.classList.add("active");
@@ -148,6 +143,7 @@ pen_tool_icon.addEventListener("click", (e) => {
         // tool.beginPath();
         is_penToolSelected = false;
         pen_tool_btn.classList.remove("active");
+        document.body.style.cursor = "default"
     }
 })
 
@@ -157,6 +153,7 @@ eraser_icon.addEventListener('click', (e) => {
     if (is_Active == false) {
         is_penToolSelected = false;
         is_eraseToolSelected = true;
+        document.body.style.cursor = "url(http://www.rw-designer.com/cursor-extern.php?id=85157),auto"
         eraser_btn.classList.add("active");
         pen_tool_btn.classList.remove("active");
         console.log(currentTheme)
@@ -192,6 +189,7 @@ eraser_icon.addEventListener('click', (e) => {
         })
     } else {
         is_eraseToolSelected = false;
+        document.body.style.cursor ="default";
         eraser_btn.classList.remove("active");
         console.log("Remove ho gya")
     }
